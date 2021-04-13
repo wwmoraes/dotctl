@@ -1,0 +1,30 @@
+{
+  "recommendations": [
+    "njpwerner.autodocstring",
+    "littlefoxteam.vscode-python-test-adapter",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "leonhard-s.python-sphinx-highlight",
+    "ryanluker.vscode-coverage-gutters",
+    "datoux.vscode-pytest-intellisence",
+    "dongli.python-preview",
+    "hbenl.vscode-test-explorer",
+    "ms-vscode.test-adapter-converter"
+  ],
+  "unwantedRecommendations": [
+    // Microsoft's global recommendations, FML
+    "dbaeumer.jshint",
+    "hookyqr.beautify",
+    "felipecaputo.git-project-manager",
+    "donjayamanne.githistory",
+    "googlecloudtools.cloudcode",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "msjsdiag.vscode-react-native",
+    "ms-vscode-remote.remote-containers",
+    "mindaro.mindaro",
+    "ms-vscode-remote.remote-containers",
+    "vscodevim.vim",
+    "msjsdiag.vscode-react-native",
+    "googlecloudtools.cloudcode"
+  ]
+}

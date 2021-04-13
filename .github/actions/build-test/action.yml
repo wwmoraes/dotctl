@@ -1,0 +1,24 @@
+name: Build test image
+description: Creates a container image to test the dotctl project
+author: William Artero
+branding:
+  icon: box
+  color: blue
+inputs:
+  image-name:
+    description: container image name
+    required: false
+    default: dotctl-test
+  image-tag:
+    description: container image tag
+    required: false
+    default: latest
+outputs: {}
+runs:
+  using: composite
+  steps:
+    - run: ${{ github.action_path }}/action.bash
+      shell: bash
+      env:
+        IMAGE_NAME: ${{ inputs.image-name }}
+        IMAGE_TAG: ${{ inputs.image-tag }}

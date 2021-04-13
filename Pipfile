@@ -1,0 +1,54 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+click = "*"
+colorama = "*"
+requests = "*"
+
+[dev-packages]
+pytest = "*"
+build = "*"
+yapf = "*"
+# twine = "*"
+bandit = "*"
+pyflakes = "*"
+# radon = "*"
+mypy = "*"
+pytest-cov = "*"
+coverage = "*"
+pytest-mock = "*"
+mock = "*"
+python-dotenv = "*"
+dotctl = {editable = true, path = "."}
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+dotctl = "python3 -m dotctl.cmd.dotctl"
+dotfiles = "python3 -m dotctl.cmd.dotfiles"
+dotsecrets = "python3 -m dotctl.cmd.dotsecrets"
+dotrun = "python3 -m dotctl.cmd.dotrun"
+build = "python3 -m build"
+clean = "rm -rf build dist *.egg-info htmlcov .coverage"
+test = "sudo -H -E pytest"
+test-integration = "sudo -H -E pytest -m 'integration'"
+test-unit = "sudo -H -E pytest -m 'unit'"
+list-fixtures = "pytest -q --setup-only --fixtures"
+coverage = "sudo -E pytest --cov-report xml:coverage.xml"
+coverage-xml = "coverage xml"
+coverage-html = "coverage html"
+coverage-report = "coverage report"
+fmt = "yapf -p -r -i src tests"
+lint = "yapf -p -r --diff src tests"
+sast = "bandit -q -r src"
+sast-report = "bandit -q -r --exit-zero -f json -o sast-report.json src"
+imports = "pyflakes src tests"
+issues = "mypy --namespace-packages src tests"
+cc-metrics = "radon cc src tests"
+mi-metrics = "radon mi src tests"
+hal-metrics = "radon hal src tests"
+raw-metrics = "radon raw src tests"

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+
+[tool.pytest.ini_options]
+mock_use_standalone_module = true
+addopts = "-v --cov --junit-xml=test-report.xml"
+testpaths = [
+    "tests",
+]
+markers = [
+  "unit: validates internal exceptional/edge case behaviour",
+  "integration: validates behaviour through user-facing interfaces",
+]
+norecursedirs = [
+  "tests/dotfiles",
+  "tests/fixtures",
+  "tests/helpers"
+]

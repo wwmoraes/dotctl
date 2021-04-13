@@ -1,0 +1,87 @@
+{
+  "autoDocstring.docstringFormat": "sphinx",
+  "autoDocstring.quoteStyle": "\"\"\"",
+  "cSpell.words": [
+    "Pipfile",
+    "Popen",
+    "TAGSRC",
+    "aarch",
+    "armv",
+    "binfmt",
+    "capfd",
+    "capsys",
+    "coveragerc",
+    "dotctl",
+    "dotenv",
+    "getenv",
+    "getuid",
+    "itertools",
+    "lscpu",
+    "mypy",
+    "nargs",
+    "nosec",
+    "pipenv",
+    "pyproject",
+    "pytest",
+    "setuid",
+    "sysfs",
+    "unarchiver",
+    "unstow",
+    "unstowing",
+    "untar",
+    "venv",
+    "yamllint",
+    "yapf"
+  ],
+  "debug.internalConsoleOptions": "neverOpen",
+  "files.exclude": {
+    "**/*.egg-info": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/__pycache__": true,
+    ".coverage": true,
+    ".mypy_cache/": true,
+    ".pytest_cache/": true,
+    ".venv/": true,
+    "build/": true,
+    "coverage.xml": true,
+    "dist/": true,
+    "test-report.xml": true
+  },
+  "github-actions.workflows.pinned.workflows": [
+    ".github/workflows/integration.yml"
+  ],
+  "pytest.command": "pipenv run pytest",
+  "pytest.pythonPath": "src",
+  "python.analysis.extraPaths": [
+    "./src"
+  ],
+  "python.autoComplete.extraPaths": [
+    "./src"
+  ],
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfPath": ".venv/bin/yapf",
+  "python.linting.banditEnabled": true,
+  "python.linting.banditPath": ".venv/bin/mypy",
+  "python.linting.mypyArgs": [
+    "--config-file",
+    "${workspaceFolder}/.mypy.ini"
+  ],
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyPath": ".venv/bin/mypy",
+  "python.pythonPath": ".venv/bin/python",
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestArgs": [
+    "--cov-report=xml:coverage.xml"
+  ],
+  "python.testing.pytestPath": ".venv/bin/pytest",
+  "pythonTestExplorer.testFramework": "pytest",
+  "testExplorer.hideEmptyLog": true,
+  "testExplorer.showOnRun": false,
+  "testExplorer.useNativeTesting": true,
+  "workspace.isHidden": true
+}

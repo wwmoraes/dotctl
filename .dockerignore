@@ -1,0 +1,52 @@
+.git
+.github
+.mypy_cache
+.pytest_cache
+.venv
+.vscode
+tmp
+dist
+**/__pycache__/
+
+.coverage
+.dockerignore
+.editorconfig
+.gitignore
+.style.yapf
+.wakatime-project
+CODE_OF_CONDUCT.md
+Dockerfile
+Makefile
+TODO.md
+
+/*.xml
+**/*.egg-info
+**/*.whl
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

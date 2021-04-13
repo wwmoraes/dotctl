@@ -1,0 +1,76 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "dotctl",
+      "type": "python",
+      "request": "launch",
+      "module": "dotctl.cmd.dotctl",
+      "console": "integratedTerminal",
+      "args": []
+    },
+    {
+      "name": "dotfiles install",
+      "type": "python",
+      "request": "launch",
+      "module": "dotctl.cmd.dotfiles",
+      "console": "integratedTerminal",
+      "args": [
+        "install"
+      ],
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "dotfiles setup",
+      "type": "python",
+      "request": "launch",
+      "module": "dotctl.cmd.dotfiles",
+      "console": "integratedTerminal",
+      "args": [
+        "setup"
+      ],
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "dotsecrets",
+      "type": "python",
+      "request": "launch",
+      "module": "dotctl.cmd.dotsecrets",
+      "console": "integratedTerminal",
+      "args": []
+    },
+    {
+      "name": "dotrun file",
+      "type": "python",
+      "request": "launch",
+      "module": "dotctl.cmd.dotrun",
+      "console": "integratedTerminal",
+      "args": [
+        "${file}"
+      ]
+    },
+    {
+      "name": "Debug test",
+      "type": "python",
+      "request": "test",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "justMyCode": true,
+      "stopOnEntry": false,
+      "env": {
+        "PYTEST_ADDOPTS": "--no-cov",
+      }
+    }
+  ]
+}

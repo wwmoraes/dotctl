@@ -1,0 +1,31 @@
+name: Build test image
+description: Creates a container image to test the dotctl project
+author: William Artero
+branding:
+  icon: box
+  color: blue
+inputs:
+  pytest-cache-dir:
+    description: local directory containing pytest cache files
+    required: false
+    default: .pytest_cache
+  image-name:
+    description: container image name
+    required: true
+  image-tag:
+    description: container image tag
+    required: true
+  root-dir:
+    description: root directory containing the project checked out files
+    required: true
+outputs: {}
+runs:
+  using: composite
+  steps:
+    - run: ${{ github.action_path }}/action.bash
+      shell: bash
+      env:
+        IMAGE_NAME: ${{ inputs.image-name }}
+        IMAGE_TAG: ${{ inputs.image-tag }}
+        PYTEST_CACHE_DIR: ${{ inputs.pytest-cache-dir }}
+        ROOT_DIR: ${{ inputs.root-dir }}
